@@ -34,19 +34,6 @@ CREATE TABLE `contocorrente` (
   `dataCreazione` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dump dei dati per la tabella `contocorrente`
---
-
-INSERT INTO `contocorrente` (`iban`, `idCliente`, `saldo`, `dataCreazione`) VALUES
-(4, 55, 234.2, '2020-12-30'),
-(5, 55, 234.2, '2021-01-02'),
-(6, 55, 234.2, '2020-12-30'),
-(7, 4, 2.2, '2020-10-10'),
-(8, 4, 2.2, '2020-09-09'),
-(9, 4, 2340.2, '2020-09-09'),
-(10, 3423, 35235200, '2010-10-20');
-
 -- --------------------------------------------------------
 
 --
