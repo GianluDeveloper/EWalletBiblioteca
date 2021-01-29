@@ -1,6 +1,7 @@
 package service;
 
 import java.sql.SQLException;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,6 +10,7 @@ import javax.jws.WebService;
 import com.RicercaDb;
 
 import dao.ContoCorrenteDao;
+import exceptions.NotHandledTypeException;
 import model.ContoCorrente;
 import response.Response;
 import response.ResponseContoCorrente;
@@ -23,17 +25,31 @@ public class ContoCorrenteWS {
 		try {
 			contoCorrenteDao.insert(d);
 			r.setSuccesso(true);
-		} catch (ClassNotFoundException | SQLException e) {
-			// TODO Auto-generated catch block
+		} catch (ParseException e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1001);
-			r.setDescription(e.toString());
-		}catch(Exception e) {
+			r.setDescription("Parse Exception: "+e.toString());
+		} catch(ClassNotFoundException e) {
+			e.printStackTrace();
+			r.setSuccesso(false);
+			r.setErrorCode(1002);
+			r.setDescription("Class not found exception: "+e.toString());
+		} catch(SQLException e) {
+			e.printStackTrace();
+			r.setSuccesso(false);
+			r.setErrorCode(1003);
+			r.setDescription("SQL exception: "+e.toString());
+		} catch(NotHandledTypeException e) {
+			e.printStackTrace();
+			r.setSuccesso(false);
+			r.setErrorCode(1004);
+			r.setDescription("Not Handled Type Exception: "+e.toString());
+		} catch (Exception e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1000);
-			r.setDescription(e.toString());
+			r.setDescription("Generic exception: "+e.toString());
 		}
 		
 		return r;
@@ -43,17 +59,31 @@ public class ContoCorrenteWS {
 		try {
 			contoCorrenteDao.update(d);
 			r.setSuccesso(true);
-		} catch (ClassNotFoundException | SQLException e) {
-			// TODO Auto-generated catch block
+		} catch (ParseException e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1001);
-			r.setDescription(e.toString());
-		}catch(Exception e) {
+			r.setDescription("Parse Exception: "+e.toString());
+		} catch(ClassNotFoundException e) {
+			e.printStackTrace();
+			r.setSuccesso(false);
+			r.setErrorCode(1002);
+			r.setDescription("Class not found exception: "+e.toString());
+		} catch(SQLException e) {
+			e.printStackTrace();
+			r.setSuccesso(false);
+			r.setErrorCode(1003);
+			r.setDescription("SQL exception: "+e.toString());
+		} catch(NotHandledTypeException e) {
+			e.printStackTrace();
+			r.setSuccesso(false);
+			r.setErrorCode(1004);
+			r.setDescription("Not Handled Type Exception: "+e.toString());
+		} catch (Exception e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1000);
-			r.setDescription(e.toString());
+			r.setDescription("Generic exception: "+e.toString());
 		}
 		
 		return r;
@@ -63,17 +93,31 @@ public class ContoCorrenteWS {
 		try {
 			contoCorrenteDao.remove(d);
 			r.setSuccesso(true);
-		} catch (ClassNotFoundException | SQLException e) {
-			// TODO Auto-generated catch block
+		} catch (ParseException e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1001);
-			r.setDescription(e.toString());
-		}catch(Exception e) {
+			r.setDescription("Parse Exception: "+e.toString());
+		} catch(ClassNotFoundException e) {
+			e.printStackTrace();
+			r.setSuccesso(false);
+			r.setErrorCode(1002);
+			r.setDescription("Class not found exception: "+e.toString());
+		} catch(SQLException e) {
+			e.printStackTrace();
+			r.setSuccesso(false);
+			r.setErrorCode(1003);
+			r.setDescription("SQL exception: "+e.toString());
+		} catch(NotHandledTypeException e) {
+			e.printStackTrace();
+			r.setSuccesso(false);
+			r.setErrorCode(1004);
+			r.setDescription("Not Handled Type Exception: "+e.toString());
+		} catch (Exception e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1000);
-			r.setDescription(e.toString());
+			r.setDescription("Generic exception: "+e.toString());
 		}
 		
 		return r;
@@ -83,11 +127,31 @@ public class ContoCorrenteWS {
 		try {
 			r.setContoCorrente(contoCorrenteDao.find(ricercaDb));
 			r.setSuccesso(true);
+		} catch (ParseException e) {
+			e.printStackTrace();
+			r.setSuccesso(false);
+			r.setErrorCode(1001);
+			r.setDescription("Parse Exception: "+e.toString());
+		} catch(ClassNotFoundException e) {
+			e.printStackTrace();
+			r.setSuccesso(false);
+			r.setErrorCode(1002);
+			r.setDescription("Class not found exception: "+e.toString());
+		} catch(SQLException e) {
+			e.printStackTrace();
+			r.setSuccesso(false);
+			r.setErrorCode(1003);
+			r.setDescription("SQL exception: "+e.toString());
+		} catch(NotHandledTypeException e) {
+			e.printStackTrace();
+			r.setSuccesso(false);
+			r.setErrorCode(1004);
+			r.setDescription("Not Handled Type Exception: "+e.toString());
 		} catch (Exception e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1000);
-			r.setDescription(e.toString());
+			r.setDescription("Generic exception: "+e.toString());
 		}
 		return r;
 	}
@@ -98,11 +162,31 @@ public class ContoCorrenteWS {
 			c.add(contoCorrenteDao.findById(id));
 			r.setContoCorrente(c);
 			r.setSuccesso(true);
+		} catch (ParseException e) {
+			e.printStackTrace();
+			r.setSuccesso(false);
+			r.setErrorCode(1001);
+			r.setDescription("Parse Exception: "+e.toString());
+		} catch(ClassNotFoundException e) {
+			e.printStackTrace();
+			r.setSuccesso(false);
+			r.setErrorCode(1002);
+			r.setDescription("Class not found exception: "+e.toString());
+		} catch(SQLException e) {
+			e.printStackTrace();
+			r.setSuccesso(false);
+			r.setErrorCode(1003);
+			r.setDescription("SQL exception: "+e.toString());
+		} catch(NotHandledTypeException e) {
+			e.printStackTrace();
+			r.setSuccesso(false);
+			r.setErrorCode(1004);
+			r.setDescription("Not Handled Type Exception: "+e.toString());
 		} catch (Exception e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1000);
-			r.setDescription(e.toString());
+			r.setDescription("Generic exception: "+e.toString());
 		}
 		return r;
 	}
@@ -111,11 +195,31 @@ public class ContoCorrenteWS {
 		try {
 			r.setContoCorrente(contoCorrenteDao.findAll(reverse));
 			r.setSuccesso(true);
+		} catch (ParseException e) {
+			e.printStackTrace();
+			r.setSuccesso(false);
+			r.setErrorCode(1001);
+			r.setDescription("Parse Exception: "+e.toString());
+		} catch(ClassNotFoundException e) {
+			e.printStackTrace();
+			r.setSuccesso(false);
+			r.setErrorCode(1002);
+			r.setDescription("Class not found exception: "+e.toString());
+		} catch(SQLException e) {
+			e.printStackTrace();
+			r.setSuccesso(false);
+			r.setErrorCode(1003);
+			r.setDescription("SQL exception: "+e.toString());
+		} catch(NotHandledTypeException e) {
+			e.printStackTrace();
+			r.setSuccesso(false);
+			r.setErrorCode(1004);
+			r.setDescription("Not Handled Type Exception: "+e.toString());
 		} catch (Exception e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1000);
-			r.setDescription(e.toString());
+			r.setDescription("Generic exception: "+e.toString());
 		}
 		return r;
 	}

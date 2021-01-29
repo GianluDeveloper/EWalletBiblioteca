@@ -4,6 +4,8 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import exceptions.NotHandledTypeException;
+
 public class DBHandler {
 	   private static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";  
 	   private static final String DB_URL = "jdbc:mysql://localhost/ewallet";
@@ -16,7 +18,7 @@ public class DBHandler {
 		   return this.res;
 	   }
 	   
-	   public boolean sql(String sql, Object[] objs) throws Exception {
+	   public boolean sql(String sql, Object[] objs) throws ClassNotFoundException, SQLException, NotHandledTypeException   {
 		   boolean success=false;
 		   Connection conn = null;
 		   PreparedStatement stmt = null;
@@ -42,7 +44,7 @@ public class DBHandler {
 	    	  }else if(obj.getClass().getTypeName().toString().matches(".*java\\.sql\\.Date.*")) {
 	    		  stmt.setDate(counter++,(java.sql.Date)obj);
 	    	  }else {
-	    		  throw new Exception(obj.getClass().getTypeName().toString());
+	    		  throw new NotHandledTypeException(obj.getClass().getTypeName().toString());
 	    	  }
 	      }
 	      

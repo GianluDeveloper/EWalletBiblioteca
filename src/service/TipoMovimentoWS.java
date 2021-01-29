@@ -1,6 +1,7 @@
 package service;
 
 import java.sql.SQLException;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,6 +10,7 @@ import javax.jws.WebService;
 import com.RicercaDb;
 
 import dao.TipoMovimentoDao;
+import exceptions.NotHandledTypeException;
 import model.TipoMovimento;
 import response.Response;
 import response.ResponseTipoMovimento;
@@ -22,17 +24,31 @@ public class TipoMovimentoWS {
 		try {
 			tipoMovimentoDao.insert(d);
 			r.setSuccesso(true);
-		} catch (ClassNotFoundException | SQLException e) {
-			// TODO Auto-generated catch block
+		} catch (ParseException e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1001);
-			r.setDescription(e.toString());
-		}catch(Exception e) {
+			r.setDescription("Parse Exception: "+e.toString());
+		} catch(ClassNotFoundException e) {
+			e.printStackTrace();
+			r.setSuccesso(false);
+			r.setErrorCode(1002);
+			r.setDescription("Class not found exception: "+e.toString());
+		} catch(SQLException e) {
+			e.printStackTrace();
+			r.setSuccesso(false);
+			r.setErrorCode(1003);
+			r.setDescription("SQL exception: "+e.toString());
+		} catch(NotHandledTypeException e) {
+			e.printStackTrace();
+			r.setSuccesso(false);
+			r.setErrorCode(1004);
+			r.setDescription("Not Handled Type Exception: "+e.toString());
+		} catch (Exception e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1000);
-			r.setDescription(e.toString());
+			r.setDescription("Generic exception: "+e.toString());
 		}
 		
 		return r;
@@ -42,17 +58,31 @@ public class TipoMovimentoWS {
 		try {
 			tipoMovimentoDao.update(d);
 			r.setSuccesso(true);
-		} catch (ClassNotFoundException | SQLException e) {
-			// TODO Auto-generated catch block
+		} catch (ParseException e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1001);
-			r.setDescription(e.toString());
-		}catch(Exception e) {
+			r.setDescription("Parse Exception: "+e.toString());
+		} catch(ClassNotFoundException e) {
+			e.printStackTrace();
+			r.setSuccesso(false);
+			r.setErrorCode(1002);
+			r.setDescription("Class not found exception: "+e.toString());
+		} catch(SQLException e) {
+			e.printStackTrace();
+			r.setSuccesso(false);
+			r.setErrorCode(1003);
+			r.setDescription("SQL exception: "+e.toString());
+		} catch(NotHandledTypeException e) {
+			e.printStackTrace();
+			r.setSuccesso(false);
+			r.setErrorCode(1004);
+			r.setDescription("Not Handled Type Exception: "+e.toString());
+		} catch (Exception e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1000);
-			r.setDescription(e.toString());
+			r.setDescription("Generic exception: "+e.toString());
 		}
 		
 		return r;
@@ -62,17 +92,31 @@ public class TipoMovimentoWS {
 		try {
 			tipoMovimentoDao.remove(d);
 			r.setSuccesso(true);
-		} catch (ClassNotFoundException | SQLException e) {
-			// TODO Auto-generated catch block
+		} catch (ParseException e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1001);
-			r.setDescription(e.toString());
-		}catch(Exception e) {
+			r.setDescription("Parse Exception: "+e.toString());
+		} catch(ClassNotFoundException e) {
+			e.printStackTrace();
+			r.setSuccesso(false);
+			r.setErrorCode(1002);
+			r.setDescription("Class not found exception: "+e.toString());
+		} catch(SQLException e) {
+			e.printStackTrace();
+			r.setSuccesso(false);
+			r.setErrorCode(1003);
+			r.setDescription("SQL exception: "+e.toString());
+		} catch(NotHandledTypeException e) {
+			e.printStackTrace();
+			r.setSuccesso(false);
+			r.setErrorCode(1004);
+			r.setDescription("Not Handled Type Exception: "+e.toString());
+		} catch (Exception e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1000);
-			r.setDescription(e.toString());
+			r.setDescription("Generic exception: "+e.toString());
 		}
 		
 		return r;
@@ -82,11 +126,31 @@ public class TipoMovimentoWS {
 		try {
 			r.setTipoMovimento(tipoMovimentoDao.find(ricercaDb));
 			r.setSuccesso(true);
+		} catch (ParseException e) {
+			e.printStackTrace();
+			r.setSuccesso(false);
+			r.setErrorCode(1001);
+			r.setDescription("Parse Exception: "+e.toString());
+		} catch(ClassNotFoundException e) {
+			e.printStackTrace();
+			r.setSuccesso(false);
+			r.setErrorCode(1002);
+			r.setDescription("Class not found exception: "+e.toString());
+		} catch(SQLException e) {
+			e.printStackTrace();
+			r.setSuccesso(false);
+			r.setErrorCode(1003);
+			r.setDescription("SQL exception: "+e.toString());
+		} catch(NotHandledTypeException e) {
+			e.printStackTrace();
+			r.setSuccesso(false);
+			r.setErrorCode(1004);
+			r.setDescription("Not Handled Type Exception: "+e.toString());
 		} catch (Exception e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1000);
-			r.setDescription(e.toString());
+			r.setDescription("Generic exception: "+e.toString());
 		}
 		return r;
 	}
@@ -97,11 +161,31 @@ public class TipoMovimentoWS {
 			c.add(tipoMovimentoDao.findById(id));
 			r.setTipoMovimento(c);
 			r.setSuccesso(true);
+		} catch (ParseException e) {
+			e.printStackTrace();
+			r.setSuccesso(false);
+			r.setErrorCode(1001);
+			r.setDescription("Parse Exception: "+e.toString());
+		} catch(ClassNotFoundException e) {
+			e.printStackTrace();
+			r.setSuccesso(false);
+			r.setErrorCode(1002);
+			r.setDescription("Class not found exception: "+e.toString());
+		} catch(SQLException e) {
+			e.printStackTrace();
+			r.setSuccesso(false);
+			r.setErrorCode(1003);
+			r.setDescription("SQL exception: "+e.toString());
+		} catch(NotHandledTypeException e) {
+			e.printStackTrace();
+			r.setSuccesso(false);
+			r.setErrorCode(1004);
+			r.setDescription("Not Handled Type Exception: "+e.toString());
 		} catch (Exception e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1000);
-			r.setDescription(e.toString());
+			r.setDescription("Generic exception: "+e.toString());
 		}
 		return r;
 	}
@@ -110,11 +194,31 @@ public class TipoMovimentoWS {
 		try {
 			r.setTipoMovimento(tipoMovimentoDao.findAll(reverse));
 			r.setSuccesso(true);
+		} catch (ParseException e) {
+			e.printStackTrace();
+			r.setSuccesso(false);
+			r.setErrorCode(1001);
+			r.setDescription("Parse Exception: "+e.toString());
+		} catch(ClassNotFoundException e) {
+			e.printStackTrace();
+			r.setSuccesso(false);
+			r.setErrorCode(1002);
+			r.setDescription("Class not found exception: "+e.toString());
+		} catch(SQLException e) {
+			e.printStackTrace();
+			r.setSuccesso(false);
+			r.setErrorCode(1003);
+			r.setDescription("SQL exception: "+e.toString());
+		} catch(NotHandledTypeException e) {
+			e.printStackTrace();
+			r.setSuccesso(false);
+			r.setErrorCode(1004);
+			r.setDescription("Not Handled Type Exception: "+e.toString());
 		} catch (Exception e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1000);
-			r.setDescription(e.toString());
+			r.setDescription("Generic exception: "+e.toString());
 		}
 		return r;
 	}
