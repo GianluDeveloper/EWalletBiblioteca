@@ -17,7 +17,6 @@ public class TipoMovimento {
 		this.descrizione = descrizione;
 	}
 	public TipoMovimento(int idTipoMovimento, String descrizione) {
-		super();
 		this.idTipoMovimento = idTipoMovimento;
 		this.descrizione = descrizione;
 	}
