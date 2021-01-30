@@ -36,7 +36,7 @@ public class TipoMovimentoDao {
 	
 	public TipoMovimento findById(int id) throws ClassNotFoundException, SQLException,Exception {
 		Object[] campi = {id};
-		String sql = "SELECT `idTipoMovimento`,`tipomovimento` FROM `tipomovimento` WHERE `idTipoMovimento`=? ";
+		String sql = "SELECT `idTipoMovimento`,`descrizione` FROM `tipomovimento` WHERE `idTipoMovimento`=? ";
 		DBHandler dbHandler = new DBHandler();
 		dbHandler.sql(sql, campi);
 		List<Object> responses = dbHandler.getResponse();
