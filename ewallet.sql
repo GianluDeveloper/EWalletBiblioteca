@@ -2,10 +2,10 @@
 -- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Creato il: Gen 29, 2021 alle 12:59
--- Versione del server: 10.4.17-MariaDB
--- Versione PHP: 8.0.0
+-- Host: localhost
+-- Generation Time: Jan 30, 2021 at 02:58 PM
+-- Server version: 8.0.23
+-- PHP Version: 7.4.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,53 +24,82 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struttura della tabella `contocorrente`
+-- Table structure for table `contocorrente`
 --
 
 CREATE TABLE `contocorrente` (
-  `iban` int(11) NOT NULL,
-  `idCliente` int(11) NOT NULL,
+  `iban` int NOT NULL,
+  `idCliente` int NOT NULL,
   `saldo` float NOT NULL,
   `dataCreazione` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `contocorrente`
+--
+
+INSERT INTO `contocorrente` (`iban`, `idCliente`, `saldo`, `dataCreazione`) VALUES
+(1, 10, 879.21, '2021-01-30');
+
 -- --------------------------------------------------------
 
 --
--- Struttura della tabella `movimenti`
+-- Table structure for table `movimenti`
 --
 
 CREATE TABLE `movimenti` (
-  `id` int(11) NOT NULL,
-  `iban` int(11) NOT NULL,
+  `id` int NOT NULL,
+  `iban` int NOT NULL,
   `importo` float NOT NULL,
   `dataMovimento` date NOT NULL,
-  `idTipoMovimento` int(11) NOT NULL
+  `idTipoMovimento` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `movimenti`
+--
+
+INSERT INTO `movimenti` (`id`, `iban`, `importo`, `dataMovimento`, `idTipoMovimento`) VALUES
+(1, 1, 999.99, '2021-01-30', 1);
+INSERT INTO `movimenti` (`id`, `iban`, `importo`, `dataMovimento`, `idTipoMovimento`) VALUES
+(2, 1, 130.21, '2021-01-31', 3);
+INSERT INTO `movimenti` (`id`, `iban`, `importo`, `dataMovimento`, `idTipoMovimento`) VALUES
+(3, 1, -250.99, '2021-01-31', 3);
 
 -- --------------------------------------------------------
 
 --
--- Struttura della tabella `tipomovimento`
+-- Table structure for table `tipomovimento`
 --
 
 CREATE TABLE `tipomovimento` (
-  `idTipoMovimento` int(11) NOT NULL,
+  `idTipoMovimento` int NOT NULL,
   `descrizione` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Indici per le tabelle scaricate
+-- Dumping data for table `tipomovimento`
+--
+
+INSERT INTO `tipomovimento` (`idTipoMovimento`, `descrizione`) VALUES
+(1, 'Stipendio');
+INSERT INTO `tipomovimento` (`idTipoMovimento`, `descrizione`) VALUES
+(2, 'Conguaglio');
+INSERT INTO `tipomovimento` (`idTipoMovimento`, `descrizione`) VALUES
+(3, 'Risarcimento Danni');
+
+--
+-- Indexes for dumped tables
 --
 
 --
--- Indici per le tabelle `contocorrente`
+-- Indexes for table `contocorrente`
 --
 ALTER TABLE `contocorrente`
   ADD PRIMARY KEY (`iban`);
 
 --
--- Indici per le tabelle `movimenti`
+-- Indexes for table `movimenti`
 --
 ALTER TABLE `movimenti`
   ADD PRIMARY KEY (`id`),
@@ -78,39 +107,39 @@ ALTER TABLE `movimenti`
   ADD KEY `fk_iban` (`iban`);
 
 --
--- Indici per le tabelle `tipomovimento`
+-- Indexes for table `tipomovimento`
 --
 ALTER TABLE `tipomovimento`
   ADD PRIMARY KEY (`idTipoMovimento`);
 
 --
--- AUTO_INCREMENT per le tabelle scaricate
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT per la tabella `contocorrente`
+-- AUTO_INCREMENT for table `contocorrente`
 --
 ALTER TABLE `contocorrente`
-  MODIFY `iban` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `iban` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT per la tabella `movimenti`
+-- AUTO_INCREMENT for table `movimenti`
 --
 ALTER TABLE `movimenti`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT per la tabella `tipomovimento`
+-- AUTO_INCREMENT for table `tipomovimento`
 --
 ALTER TABLE `tipomovimento`
-  MODIFY `idTipoMovimento` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idTipoMovimento` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- Limiti per le tabelle scaricate
+-- Constraints for dumped tables
 --
 
 --
--- Limiti per la tabella `movimenti`
+-- Constraints for table `movimenti`
 --
 ALTER TABLE `movimenti`
   ADD CONSTRAINT `fk_iban` FOREIGN KEY (`iban`) REFERENCES `contocorrente` (`iban`),

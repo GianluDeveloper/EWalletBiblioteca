@@ -7,8 +7,13 @@ import java.util.List;
 import exceptions.NotHandledTypeException;
 
 public class DBHandler {
+	   private static final String DBName = "ewallet";
+
 	   private static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";  
-	   private static final String DB_URL = "jdbc:mysql://localhost/ewallet";
+	   private static final String DB_URL =
+	   "jdbc:mysql://dbWallet:3306/"+DBName
+		+"?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
+
 
 	   private static final String USER = "ewallet";
 	   private static final String PASS = "ewallet";
