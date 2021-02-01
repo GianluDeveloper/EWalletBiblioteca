@@ -14,5 +14,5 @@ public class ResponseContoCorrente extends Response {
 	public void setContoCorrente(List<ContoCorrente> contiCorrente) {
 		this.contoCorrente = contiCorrente;
 	}
-	
+
 }

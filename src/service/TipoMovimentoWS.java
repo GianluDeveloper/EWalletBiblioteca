@@ -28,31 +28,32 @@ public class TipoMovimentoWS {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1001);
-			r.setDescription("Parse Exception: "+e.toString());
-		} catch(ClassNotFoundException e) {
+			r.setDescription("Parse Exception: " + e.toString());
+		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1002);
-			r.setDescription("Class not found exception: "+e.toString());
-		} catch(SQLException e) {
+			r.setDescription("Class not found exception: " + e.toString());
+		} catch (SQLException e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1003);
-			r.setDescription("SQL exception: "+e.toString());
-		} catch(NotHandledTypeException e) {
+			r.setDescription("SQL exception: " + e.toString());
+		} catch (NotHandledTypeException e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1004);
-			r.setDescription("Not Handled Type Exception: "+e.toString());
+			r.setDescription("Not Handled Type Exception: " + e.toString());
 		} catch (Exception e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1000);
-			r.setDescription("Generic exception: "+e.toString());
+			r.setDescription("Generic exception: " + e.toString());
 		}
-		
+
 		return r;
 	}
+
 	public Response update(TipoMovimento d) {
 		Response r = new Response();
 		try {
@@ -62,31 +63,32 @@ public class TipoMovimentoWS {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1001);
-			r.setDescription("Parse Exception: "+e.toString());
-		} catch(ClassNotFoundException e) {
+			r.setDescription("Parse Exception: " + e.toString());
+		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1002);
-			r.setDescription("Class not found exception: "+e.toString());
-		} catch(SQLException e) {
+			r.setDescription("Class not found exception: " + e.toString());
+		} catch (SQLException e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1003);
-			r.setDescription("SQL exception: "+e.toString());
-		} catch(NotHandledTypeException e) {
+			r.setDescription("SQL exception: " + e.toString());
+		} catch (NotHandledTypeException e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1004);
-			r.setDescription("Not Handled Type Exception: "+e.toString());
+			r.setDescription("Not Handled Type Exception: " + e.toString());
 		} catch (Exception e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1000);
-			r.setDescription("Generic exception: "+e.toString());
+			r.setDescription("Generic exception: " + e.toString());
 		}
-		
+
 		return r;
 	}
+
 	public Response remove(TipoMovimento d) {
 		Response r = new Response();
 		try {
@@ -96,31 +98,32 @@ public class TipoMovimentoWS {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1001);
-			r.setDescription("Parse Exception: "+e.toString());
-		} catch(ClassNotFoundException e) {
+			r.setDescription("Parse Exception: " + e.toString());
+		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1002);
-			r.setDescription("Class not found exception: "+e.toString());
-		} catch(SQLException e) {
+			r.setDescription("Class not found exception: " + e.toString());
+		} catch (SQLException e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1003);
-			r.setDescription("SQL exception: "+e.toString());
-		} catch(NotHandledTypeException e) {
+			r.setDescription("SQL exception: " + e.toString());
+		} catch (NotHandledTypeException e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1004);
-			r.setDescription("Not Handled Type Exception: "+e.toString());
+			r.setDescription("Not Handled Type Exception: " + e.toString());
 		} catch (Exception e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1000);
-			r.setDescription("Generic exception: "+e.toString());
+			r.setDescription("Generic exception: " + e.toString());
 		}
-		
+
 		return r;
 	}
+
 	public ResponseTipoMovimento find(RicercaDb ricercaDb) {
 		ResponseTipoMovimento r = new ResponseTipoMovimento();
 		try {
@@ -130,30 +133,31 @@ public class TipoMovimentoWS {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1001);
-			r.setDescription("Parse Exception: "+e.toString());
-		} catch(ClassNotFoundException e) {
+			r.setDescription("Parse Exception: " + e.toString());
+		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1002);
-			r.setDescription("Class not found exception: "+e.toString());
-		} catch(SQLException e) {
+			r.setDescription("Class not found exception: " + e.toString());
+		} catch (SQLException e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1003);
-			r.setDescription("SQL exception: "+e.toString());
-		} catch(NotHandledTypeException e) {
+			r.setDescription("SQL exception: " + e.toString());
+		} catch (NotHandledTypeException e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1004);
-			r.setDescription("Not Handled Type Exception: "+e.toString());
+			r.setDescription("Not Handled Type Exception: " + e.toString());
 		} catch (Exception e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1000);
-			r.setDescription("Generic exception: "+e.toString());
+			r.setDescription("Generic exception: " + e.toString());
 		}
 		return r;
 	}
+
 	public ResponseTipoMovimento findById(Integer id) {
 		ResponseTipoMovimento r = new ResponseTipoMovimento();
 		try {
@@ -165,30 +169,31 @@ public class TipoMovimentoWS {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1001);
-			r.setDescription("Parse Exception: "+e.toString());
-		} catch(ClassNotFoundException e) {
+			r.setDescription("Parse Exception: " + e.toString());
+		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1002);
-			r.setDescription("Class not found exception: "+e.toString());
-		} catch(SQLException e) {
+			r.setDescription("Class not found exception: " + e.toString());
+		} catch (SQLException e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1003);
-			r.setDescription("SQL exception: "+e.toString());
-		} catch(NotHandledTypeException e) {
+			r.setDescription("SQL exception: " + e.toString());
+		} catch (NotHandledTypeException e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1004);
-			r.setDescription("Not Handled Type Exception: "+e.toString());
+			r.setDescription("Not Handled Type Exception: " + e.toString());
 		} catch (Exception e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1000);
-			r.setDescription("Generic exception: "+e.toString());
+			r.setDescription("Generic exception: " + e.toString());
 		}
 		return r;
 	}
+
 	public ResponseTipoMovimento findAll(Boolean reverse) {
 		ResponseTipoMovimento r = new ResponseTipoMovimento();
 		try {
@@ -198,29 +203,29 @@ public class TipoMovimentoWS {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1001);
-			r.setDescription("Parse Exception: "+e.toString());
-		} catch(ClassNotFoundException e) {
+			r.setDescription("Parse Exception: " + e.toString());
+		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1002);
-			r.setDescription("Class not found exception: "+e.toString());
-		} catch(SQLException e) {
+			r.setDescription("Class not found exception: " + e.toString());
+		} catch (SQLException e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1003);
-			r.setDescription("SQL exception: "+e.toString());
-		} catch(NotHandledTypeException e) {
+			r.setDescription("SQL exception: " + e.toString());
+		} catch (NotHandledTypeException e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1004);
-			r.setDescription("Not Handled Type Exception: "+e.toString());
+			r.setDescription("Not Handled Type Exception: " + e.toString());
 		} catch (Exception e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1000);
-			r.setDescription("Generic exception: "+e.toString());
+			r.setDescription("Generic exception: " + e.toString());
 		}
 		return r;
 	}
-	
+
 }

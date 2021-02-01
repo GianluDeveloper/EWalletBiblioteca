@@ -1,21 +1,21 @@
 package model;
 
 public class ContoCorrente {
-	
 
-	private int iban,idCliente;
+	private int iban, idCliente;
 	private float saldo;
 	private String dataCreazione;
-	
+
 	public ContoCorrente() {
-		
+
 	}
 
 	public ContoCorrente(int iban, int idCliente, float saldo, String dataCreazione) {
 		this.setIban(iban);
 		this.setIdCliente(idCliente);
 		this.setSaldo(saldo);
-		this.setDataCreazione(dataCreazione);;
+		this.setDataCreazione(dataCreazione);
+		;
 	}
 
 	public int getIban() {
@@ -49,5 +49,5 @@ public class ContoCorrente {
 	public void setDataCreazione(String dataCreazione) {
 		this.dataCreazione = dataCreazione;
 	}
-	
+
 }

@@ -4,8 +4,7 @@ import java.util.List;
 
 import model.TipoMovimento;
 
-
-public class ResponseTipoMovimento extends Response{
+public class ResponseTipoMovimento extends Response {
 	private List<TipoMovimento> tipoMovimento;
 
 	public List<TipoMovimento> getTipoMovimento() {

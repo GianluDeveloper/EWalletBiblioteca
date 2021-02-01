@@ -17,9 +17,9 @@ import response.ResponseContoCorrente;
 
 @WebService
 public class ContoCorrenteWS {
-	
+
 	ContoCorrenteDao contoCorrenteDao = new ContoCorrenteDao();
-	
+
 	public Response insert(ContoCorrente d) {
 		Response r = new Response();
 		try {
@@ -29,31 +29,32 @@ public class ContoCorrenteWS {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1001);
-			r.setDescription("Parse Exception: "+e.toString());
-		} catch(ClassNotFoundException e) {
+			r.setDescription("Parse Exception: " + e.toString());
+		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1002);
-			r.setDescription("Class not found exception: "+e.toString());
-		} catch(SQLException e) {
+			r.setDescription("Class not found exception: " + e.toString());
+		} catch (SQLException e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1003);
-			r.setDescription("SQL exception: "+e.toString());
-		} catch(NotHandledTypeException e) {
+			r.setDescription("SQL exception: " + e.toString());
+		} catch (NotHandledTypeException e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1004);
-			r.setDescription("Not Handled Type Exception: "+e.toString());
+			r.setDescription("Not Handled Type Exception: " + e.toString());
 		} catch (Exception e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1000);
-			r.setDescription("Generic exception: "+e.toString());
+			r.setDescription("Generic exception: " + e.toString());
 		}
-		
+
 		return r;
 	}
+
 	public Response update(ContoCorrente d) {
 		Response r = new Response();
 		try {
@@ -63,31 +64,32 @@ public class ContoCorrenteWS {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1001);
-			r.setDescription("Parse Exception: "+e.toString());
-		} catch(ClassNotFoundException e) {
+			r.setDescription("Parse Exception: " + e.toString());
+		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1002);
-			r.setDescription("Class not found exception: "+e.toString());
-		} catch(SQLException e) {
+			r.setDescription("Class not found exception: " + e.toString());
+		} catch (SQLException e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1003);
-			r.setDescription("SQL exception: "+e.toString());
-		} catch(NotHandledTypeException e) {
+			r.setDescription("SQL exception: " + e.toString());
+		} catch (NotHandledTypeException e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1004);
-			r.setDescription("Not Handled Type Exception: "+e.toString());
+			r.setDescription("Not Handled Type Exception: " + e.toString());
 		} catch (Exception e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1000);
-			r.setDescription("Generic exception: "+e.toString());
+			r.setDescription("Generic exception: " + e.toString());
 		}
-		
+
 		return r;
 	}
+
 	public Response remove(ContoCorrente d) {
 		Response r = new Response();
 		try {
@@ -97,31 +99,32 @@ public class ContoCorrenteWS {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1001);
-			r.setDescription("Parse Exception: "+e.toString());
-		} catch(ClassNotFoundException e) {
+			r.setDescription("Parse Exception: " + e.toString());
+		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1002);
-			r.setDescription("Class not found exception: "+e.toString());
-		} catch(SQLException e) {
+			r.setDescription("Class not found exception: " + e.toString());
+		} catch (SQLException e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1003);
-			r.setDescription("SQL exception: "+e.toString());
-		} catch(NotHandledTypeException e) {
+			r.setDescription("SQL exception: " + e.toString());
+		} catch (NotHandledTypeException e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1004);
-			r.setDescription("Not Handled Type Exception: "+e.toString());
+			r.setDescription("Not Handled Type Exception: " + e.toString());
 		} catch (Exception e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1000);
-			r.setDescription("Generic exception: "+e.toString());
+			r.setDescription("Generic exception: " + e.toString());
 		}
-		
+
 		return r;
 	}
+
 	public ResponseContoCorrente find(RicercaDb ricercaDb) {
 		ResponseContoCorrente r = new ResponseContoCorrente();
 		try {
@@ -131,30 +134,31 @@ public class ContoCorrenteWS {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1001);
-			r.setDescription("Parse Exception: "+e.toString());
-		} catch(ClassNotFoundException e) {
+			r.setDescription("Parse Exception: " + e.toString());
+		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1002);
-			r.setDescription("Class not found exception: "+e.toString());
-		} catch(SQLException e) {
+			r.setDescription("Class not found exception: " + e.toString());
+		} catch (SQLException e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1003);
-			r.setDescription("SQL exception: "+e.toString());
-		} catch(NotHandledTypeException e) {
+			r.setDescription("SQL exception: " + e.toString());
+		} catch (NotHandledTypeException e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1004);
-			r.setDescription("Not Handled Type Exception: "+e.toString());
+			r.setDescription("Not Handled Type Exception: " + e.toString());
 		} catch (Exception e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1000);
-			r.setDescription("Generic exception: "+e.toString());
+			r.setDescription("Generic exception: " + e.toString());
 		}
 		return r;
 	}
+
 	public ResponseContoCorrente findById(Integer id) {
 		ResponseContoCorrente r = new ResponseContoCorrente();
 		try {
@@ -166,30 +170,31 @@ public class ContoCorrenteWS {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1001);
-			r.setDescription("Parse Exception: "+e.toString());
-		} catch(ClassNotFoundException e) {
+			r.setDescription("Parse Exception: " + e.toString());
+		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1002);
-			r.setDescription("Class not found exception: "+e.toString());
-		} catch(SQLException e) {
+			r.setDescription("Class not found exception: " + e.toString());
+		} catch (SQLException e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1003);
-			r.setDescription("SQL exception: "+e.toString());
-		} catch(NotHandledTypeException e) {
+			r.setDescription("SQL exception: " + e.toString());
+		} catch (NotHandledTypeException e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1004);
-			r.setDescription("Not Handled Type Exception: "+e.toString());
+			r.setDescription("Not Handled Type Exception: " + e.toString());
 		} catch (Exception e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1000);
-			r.setDescription("Generic exception: "+e.toString());
+			r.setDescription("Generic exception: " + e.toString());
 		}
 		return r;
 	}
+
 	public ResponseContoCorrente findAll(Boolean reverse) {
 		ResponseContoCorrente r = new ResponseContoCorrente();
 		try {
@@ -199,27 +204,27 @@ public class ContoCorrenteWS {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1001);
-			r.setDescription("Parse Exception: "+e.toString());
-		} catch(ClassNotFoundException e) {
+			r.setDescription("Parse Exception: " + e.toString());
+		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1002);
-			r.setDescription("Class not found exception: "+e.toString());
-		} catch(SQLException e) {
+			r.setDescription("Class not found exception: " + e.toString());
+		} catch (SQLException e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1003);
-			r.setDescription("SQL exception: "+e.toString());
-		} catch(NotHandledTypeException e) {
+			r.setDescription("SQL exception: " + e.toString());
+		} catch (NotHandledTypeException e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1004);
-			r.setDescription("Not Handled Type Exception: "+e.toString());
+			r.setDescription("Not Handled Type Exception: " + e.toString());
 		} catch (Exception e) {
 			e.printStackTrace();
 			r.setSuccesso(false);
 			r.setErrorCode(1000);
-			r.setDescription("Generic exception: "+e.toString());
+			r.setDescription("Generic exception: " + e.toString());
 		}
 		return r;
 	}

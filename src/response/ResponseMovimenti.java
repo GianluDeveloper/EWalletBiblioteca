@@ -4,7 +4,7 @@ import java.util.List;
 
 import model.Movimenti;
 
-public class ResponseMovimenti extends Response{
+public class ResponseMovimenti extends Response {
 	private List<Movimenti> movimenti;
 
 	public List<Movimenti> getMovimenti() {
@@ -15,5 +15,4 @@ public class ResponseMovimenti extends Response{
 		this.movimenti = movimenti;
 	}
 
-	
 }
