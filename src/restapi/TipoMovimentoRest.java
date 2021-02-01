@@ -20,6 +20,7 @@ import response.ResponseTipoMovimento;
 
 @Path("/TipoMovimento")
 public class TipoMovimentoRest {
+	
 	TipoMovimentoDao tipoMovimentoDao = new TipoMovimentoDao();
 
 	@GET
