@@ -17,6 +17,7 @@ import response.ResponseMovimenti;
 
 @WebService
 public class MovimentiWS {
+	
 	MovimentiDao movimentiDao = new MovimentiDao();
 
 	public Response insert(Movimenti d) {
