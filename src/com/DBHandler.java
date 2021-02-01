@@ -79,7 +79,7 @@ public class DBHandler {
 		// STEP 6: Clean-up environment
 
 		stmt.close();
-		// conn.close();
+		conn.close();
 		success = true;
 
 		if (stmt != null) {
