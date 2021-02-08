@@ -23,7 +23,7 @@ import model.TipoMovimento;
 import response.Response;
 import response.ResponseTipoMovimento;
 
-@Path("/TipoMovimento")
+@Path("TipoMovimento")
 public class TipoMovimentoRest {
 	
 	TipoMovimentoDao tipoMovimentoDao = new TipoMovimentoDao();

@@ -23,7 +23,7 @@ import model.ContoCorrente;
 import response.Response;
 import response.ResponseContoCorrente;
 
-@Path("/ContoCorrente")
+@Path("ContoCorrente")
 public class ContoCorrenteRest {
 
 	ContoCorrenteDao contoCorrenteDao = new ContoCorrenteDao();
